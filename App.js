@@ -12,6 +12,7 @@ import {
   View
 } from 'react-native';
 import Hashes from 'jshashes';
+import DeviceInfo from 'react-native-device-info';
 
 const MD5 = new Hashes.MD5();
 console.log(MD5.hex('Hello'));
@@ -32,6 +33,9 @@ export default class App extends Component<{}> {
         </Text>
         <Text style={styles.instructions}>
           Hello World!
+        </Text>
+        <Text style={styles.welcome}>
+          Hello! your locale: {DeviceInfo.getDeviceLocale()}
         </Text>
         <Text style={styles.instructions}>
           {instructions}
@@ -59,5 +63,4 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 });
-console.log({foo: 1})
-debugger;
+console.log({foo: 1});
