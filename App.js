@@ -11,6 +11,10 @@ import {
   Text,
   View
 } from 'react-native';
+import Hashes from 'jshashes';
+
+const MD5 = new Hashes.MD5();
+console.log(MD5.hex('Hello'));
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
