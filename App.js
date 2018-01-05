@@ -68,4 +68,4 @@ console.log({foo: 1});
 function square(n: number): number {
   return n * n;
 }
-square("2");
+square(2);
