@@ -10,3 +10,7 @@ it('renders correctly', () => {
     <App />
   );
 });
+
+jest.mock('react-native-device-info', () => ({
+  getDeviceLocale: () => 'ja',
+}));
